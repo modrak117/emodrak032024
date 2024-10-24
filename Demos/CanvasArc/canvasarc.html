@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CanvasArc</title>
+<style>
+h1 {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Canvas Arc</h1>
+<canvas id="canvas"></canvas>
+
+<script>
+// Create canvas for 2d drawing
+const canvas = window.document.querySelector('#canvas');
+const ctx = canvas.getContext('2d');
+
+// Configure canvas
+canvas.width = 800;
+canvas.height = 400;
+// Styles
+canvas.style.border = '2px solid black';
+canvas.style.margin = 'auto';
+canvas.style.display = 'block';
+
+// Draw circle
+ctx.strokeStyle = 'black';
+ctx.lineWidth = 1;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 0, Math.PI * 2);
+ctx.stroke();
+
+// Clockwise Radian 1 
+ctx.strokeStyle = 'green';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 0, 1, false);
+ctx.stroke();
+ctx.closePath();
+
+// Clockwise Radian 2 
+ctx.strokeStyle = 'yellow';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 1, 2, false);
+ctx.stroke();
+ctx.closePath();
+
+// Clockwise Radian 3 
+ctx.strokeStyle = 'red';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 2, 3, false);
+ctx.stroke();
+ctx.closePath();
+
+// Clockwise Radian 4 
+ctx.strokeStyle = 'blue';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 3, 4, false);
+ctx.stroke();
+ctx.closePath();
+
+// Clockwise Radian 5 
+ctx.strokeStyle = 'orange';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 4, 5, false);
+ctx.stroke();
+ctx.closePath();
+
+// Clockwise Radian 6 
+ctx.strokeStyle = 'purple';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 5, 6, false);
+ctx.stroke();
+ctx.closePath();
+
+// Clockwise Radian 6.28 
+ctx.strokeStyle = 'lime';
+ctx.lineWidth = 10;
+ctx.beginPath();
+ctx.arc(400, 200, 100, 6, 6.28, false);
+ctx.stroke();
+ctx.closePath();
+
+</script>
+</body>
+</html>
