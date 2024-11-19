@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Smiley Face</title>
+    <style>
+        html{color-scheme: dark;
+        background-color: beige;}
+        h1{
+            text-align: center;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Canvas Smiley Face</h1>
+
+    <canvas id="canvasone"></canvas>
+
+    <script>
+        // Create Canvas
+        const canvasOne = window.document.querySelector('#canvasone');
+        const ctx = canvasOne.getContext('2d');
+        alert
+
+
+
+        //Canvas
+        canvasOne.width = 800;
+        canvasOne.height = 400;
+        canvasOne.style.border = '5px solid black';
+        canvasOne.style.margin = 'auto';
+        canvasOne.style.display = 'block';
+
+        //Circle
+        ctx.strokeStyle = 'black';
+        ctx.fillStyle = 'rgb(255, 205, 84)';
+        ctx.lineWidth = 5;
+
+        //Face
+        ctx.beginPath();
+        ctx.arc(400, 200, 150 , 0, Math.PI * 2, false);
+        ctx.fill();
+        ctx.closePath();
+
+        // Left Eye
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(335, 165, 20, 0 , Math.PI * 2, false);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+        // Right Eye
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(455, 165, 20, 0 , Math.PI * 2, false);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+       // Mouth
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(400, 255, 75, 0 , Math.PI * 1, false);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+
+
+    </script>
+</body>
+</html>

@@ -40,11 +40,11 @@ body::-webkit-scrollbar{
     }
     /* Set page Color with functions/variables */
 :root{
-    --color-primary: black;
-    --color-secondary: black;
-    --color-tertiary: beige;
-    --color-quaternary:white;
-    --color-quinary: black;
+    --color-primary: #1D1D1D;
+    --color-secondary: #D1CAC4;
+    --color-tertiary: #D8CBC4;
+    --color-quinary: #F3F2EF;
+    --color-quaternary: white;
 }
 h2{
     color: var(--color-quinary);
@@ -56,7 +56,7 @@ h2{
     padding: 1rem 3rem 1rem 3rem;
     margin: auto;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 #pageheader {
     background-color: var(--color-primary);
@@ -120,7 +120,7 @@ transform: rotate(15deg);
     font-size: 2rem;
 }
 #media blockquote {
-    background-color: blue;
+    background-color: white;
     margin: auto;
     max-width: 50%;
 }
@@ -133,6 +133,9 @@ transform: rotate(15deg);
     background-color: var(--color-primary);
         min-height: 200px;
         padding: 1rem;
+}
+p {
+    line-height: 2;
 }
 #semester1 {
     background-color: var(--color-quaternary);
@@ -192,10 +195,10 @@ padding: 1rem;
 
 @media screen and (min-width: 1024px) {
     html{
-        background-color: #727272;
+        background-color: black;
     }
     #career {
-        background-color: yellow;
+        background-color: white;
     }
     #logo {
         left: 25px;
@@ -212,7 +215,7 @@ padding: 1rem;
 }
 @media screen and (min-width: 1200px) {
     html{
-        background-color: #272727;
+        background-color: white;
     }
     #career {
         background-color: var(--color-secondary);
@@ -258,11 +261,11 @@ padding: 1rem;
 <a name="career"></a>
 <h2>Career</h2>
 <ul>
-    <li>Letter of Introduction</li>
-    <li>Resume</li>
-    <li>Refrences</li>
-    <li>Job Application</li>
-    <li>Career Plan</li>
+    <li><a href="Career/Letter of Introduction.pdf" target="_new">Letter of Introduction</a></li>
+    <li><a href="Career/Resume.pdf" target="new">Resume</a></li>
+    <li><a href="Career/References.pdf" target="new">Refrences</a></li>
+    <li><a href="Career/JobApplication.pdf" target="new">Job Application</a></li> 
+    <li><a href="Career/Career Action Plan.pdf" target="new">Career Plan</a></li>
     <li>Work Samples</li>
     <li>Certificate</li>
 </ul>
@@ -274,6 +277,7 @@ padding: 1rem;
 <main id="pagecontent">
 <div class="container">
     <h2>Introduction</h2>
+    <h3> Git Clone</h3>
     <p>Hello, and welcome to my crappy Portfolio. My name is Evan Modrak, and this will be my 3rd year taking Web Page Design class at Coalinga Highschool. Another class that I would say I enjoy is Mock Trial. The reason why is because I have been interested in court cases and shows, and me getting the oppurtinity to fullfill this excitement is great. Some other things that I enjoy other than this class and Mock Trial, would be music, weights, fashion, and motorcycles. My most favotire hobby out of all though are the motorcycles. Reason being is because I like to go fast having grown up around them as well as my past parents riding them in the past. Who gave me my most inpiration to get a motorcycle was my Dad. He rode a Kawaski Ninja 636 which was all whited out with white gear. Me hearing the stories of him riding astonished me at has kept me intersted ever since.  </p>
 </div>
 </main>
@@ -285,7 +289,7 @@ padding: 1rem;
 <a name="semester1"></a>
 <h2>Semester1</h2>
 <ul>
-    <li>A001</li>
+    <li><a href="Activites/CanvasSmileyFace/canvassmileyface.html" target="_new">Canvas Smiley Face</a></li>
     <li>A003</li>
     <li>A004</li>
 </ul>
