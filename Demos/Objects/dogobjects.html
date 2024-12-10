@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Objects</title>
+
+    <style>
+        h1 {
+
+        }
+        h2 {
+            
+        }
+        h3  {
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Dog Objects</h1>
+
+    <h2>window.innerwidth</h2>
+    <h3>Pixel Value</h3>
+
+    <script>
+        // All objects have properties and methods
+        // Window Object
+        // window.innerwidth is a property
+        // window.alert() is a method of the window object
+        // Document Object 
+        // document.title is a prop
+        // document.write is a method
+        
+        /* 
+        Methods and Functions are the same 
+        Methods are functions that are for a specific object
+        */
+
+        // Creating Custom Objects
+        const DOG = {
+            name: 'Butters', 
+            age: 12,
+            color: 'tan',
+            size: 'small',
+            eyecolor: 'blue',
+            isAlive: true,
+            isHappy: false,
+            sex: 'female',
+            
+            image:'<img src="Images/dog.png">',
+
+            bark: function(){return 'bark!'},
+            dig: function(){return 'dig, dig!'},
+            growl: function(){return 'grrrrrr!'},
+            
+        }
+
+        // Examine the Dog 
+        window.decument.write(DOG.name + '<br>')
+        window.document.write(DOG.age + '<br>')
+        window.document.write(DOG.color + '<br>')
+        window.document.write(DOG.size + '<br>')
+        window.document.write(DOG.eyecolor + '<br>')
+        window.document.write(DOG.isAlive + '<br>')
+        window.document.write(DOG.isHappy + '<br>')
+        window.document.write(DOG.sex + '<br>')
+        window.document.write(DOG.image + '<br>')
+        window.document.write(DOG.bark + '<br>')
+        window.document.write(DOG.dig + '<br>')
+        window.document.write(DOG.growl + '<br>')
+
+    </script>
+</body>
+</html>

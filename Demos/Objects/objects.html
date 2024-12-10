@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+
+    <style>
+        h1 {
+
+        }
+        h2 {
+            
+        }
+        h3  {
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Objects</h1>
+
+    <h2>window.innerwidth</h2>
+    <h3>Pixel Value</h3>
+
+    <script>
+        // All objects have properties and methods
+        // Window Object
+        // window.innerwidth is a property
+        // window.alert() is a method of the window object
+        // Document Object 
+        // document.title is a prop
+        // document.write is a method
+        
+        /* 
+        Methods and Functions are the same 
+        Methods are functions that are for a specific object
+        */
+
+        window.addEventListener('resize', function()
+        {
+            // window.alert('click!');
+            window.document.title = window.innerWidth;
+            let heading3;
+            heading3 = window.document.querySelector('h3');
+            heading3.textContent = window.innerWidth + " pixels";
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painting App</title>
+<style>
+*
+{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+#canvas
+{
+
+position:absolute;
+top:0;
+left:0;
+
+}
+#menu
+{
+background-color:silver;
+border:2px solid #333;
+height:60px;
+position:fixed;
+bottom:0;
+padding:1rem;
+width:100%;
+display: flex;
+
+}
+
+div{padding-right: 20px;}
+
+img {
+    width: 35px; 
+}
+</style>
+</head>
+<body>
+<canvas id="canvas">
+
+</canvas>
+<section id="menu">
+<input type="color" id="colorpicker" value="#000000">
+<input type="range" id="rangepicker" min="5" max="100" value="15">
+<div id="Erase"><img src="Images/eraser.png" alt="Eraser - Erase your drawing"></div>
+<div id="Clear"><img src="Images/bin.png" alt="Trash Can - Clear your canvas"></div>
+<div id="Undo"><img src="Images/undo.svg" alt="Undo - Undo last stroke"></div>
+</section>
+
+<script>
+    // Create JavaScript variables 
+    let canvasColor = "fffff"; // To be used on eraser
+    let brushColor = "000000"; // Default brush color
+    let painting = false;
+    let brushSize = 15; 
+
+    // Create Canvas Variables
+    const CANVAS = window.document.querySelector('#canvas');
+    const CTX = CANVAS.getContext('2d');
+
+    // Create menu variables 
+    const COLORPICKER = window.document.querySelector('#colorpicker');
+    const RANGEPICKER = window.document.querySelector('#rangepicker');
+    const ERASER = window.document.querySelector('#eraser');
+    const CLEAR = window.document.querySelector('#clear');
+    const UNDO = window.document.querySelector('#undo');
+
+    // Set Canvas Style
+    CANVAS.style.backgroundColor = canvasColor;
+    CANVAS.width = window.innerWidth;
+    CANVAS.height =  window.innerHeight;
+
+    // Add event listeners to menu items 
+    COLORPICKER.addEventListener('click', function(){alert('Colorpicker!')});
+    RANGEPICKER.addEventListener('click', function(){alert('Rangepicker!')});
+    ERASER.addEventListener('click', function(){alert('Erase!')});
+    CLEAR.addEventListener('click', function(){alert('Clear!')});
+    UNDO.addEventListener('click', function(){alert('Undo!')});
+</script>
+</body>
+</html>
