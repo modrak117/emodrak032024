@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Object</title>
+    <style>
+        body {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Motorcycle Object</h1>
+
+    <script>
+        // Create Object
+        const motorcycle = 
+        {
+            color: 'red',
+            height: 5, 
+            width: 2,
+            length: 6,
+            make: 'Yamaha',
+            model: 'R6',
+            year: 2007,
+            isCustom: false,
+
+            image:'<img src="Images/motorcycle.png">',
+
+            rev: function(){return "vroom vroom"},
+            go: function(){ return "zoom"},
+            stop: function(){ return "screech"},
+        }
+
+
+        window.document.write(motorcycle.color + '<br>');
+        window.document.write(motorcycle.height + '<br>');
+        window.document.write(motorcycle.width + '<br>');
+        window.document.write(motorcycle.length + '<br>');
+        window.document.write(motorcycle.make + '<br>');
+        window.document.write(motorcycle.model + '<br>');
+        window.document.write(motorcycle.year + '<br>');
+        window.document.write(motorcycle.isCustom + '<br>');
+        window.document.write(motorcycle.image + '<br>');
+
+        
+        window.document.write(motorcycle.rev() + '<br>');
+        window.document.write(motorcycle.go() + '<br>');
+        window.document.write(motorcycle.stop() + '<br>');
+        
+    </script>
+</body>
+</html>

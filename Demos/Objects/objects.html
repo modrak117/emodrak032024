@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objects</title>
+    <title>Custom Objects</title>
 
     <style>
         h1 {
@@ -20,8 +20,6 @@
 </head>
 <body>
     <h1>Objects</h1>
-
-    <h2>window.innerwidth</h2>
     <h3>Pixel Value</h3>
 
     <script>
@@ -38,15 +36,48 @@
         Methods are functions that are for a specific object
         */
 
-        window.addEventListener('resize', function()
-        {
-            // window.alert('click!');
-            window.document.title = window.innerWidth;
-            let heading3;
-            heading3 = window.document.querySelector('h3');
-            heading3.textContent = window.innerWidth + " pixels";
-        });
+        // window.addEventListener('resize', function()
+        // {
+        //     // window.alert('click!');
+        //     // window.document.title = window.innerWidth;
+        //     let heading3;
+        //     heading3 = window.document.querySelector('h3');
+        //     heading3.textContent = window.innerWidth + " pixels";
+        // });
 
+        const DOG = 
+        {
+            name: 'Butters', 
+            age: 12,
+            color: 'tan',
+            size: 'small',
+            eyecolor: 'blue',
+            isAlive: true,
+            isHappy: false,
+            sex: 'female',
+            
+            image:'<img src="Images/dog.png">',
+
+            bark: function(){return 'bark!'},
+            dig: function(){return 'dig, dig!'},
+            growl: function(){return 'grrrrrr!'},
+            
+        }
+
+         // Examine the Dog 
+        window.document.write(DOG.name + '<br>')
+        window.document.write(DOG.age + '<br>')
+        window.document.write(DOG.color + '<br>')
+        window.document.write(DOG.size + '<br>')
+        window.document.write(DOG.eyecolor + '<br>')
+        window.document.write(DOG.isAlive + '<br>')
+        window.document.write(DOG.isHappy + '<br>')
+        window.document.write(DOG.sex + '<br>')
+        window.document.write(DOG.image + '<br>')
+        window.document.write(DOG.bark() + '<br>')
+        window.document.write(DOG.dig() + '<br>')
+        window.document.write(DOG.growl() + '<br>')
+    
     </script>
 </body>
 </html>

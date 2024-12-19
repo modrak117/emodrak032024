@@ -46,17 +46,21 @@ img {
 <section id="menu">
 <input type="color" id="colorpicker" value="#000000">
 <input type="range" id="rangepicker" min="5" max="100" value="15">
-<div id="Erase"><img src="Images/eraser.png" alt="Eraser - Erase your drawing"></div>
-<div id="Clear"><img src="Images/bin.png" alt="Trash Can - Clear your canvas"></div>
-<div id="Undo"><img src="Images/undo.svg" alt="Undo - Undo last stroke"></div>
+<div id="erase"><img src="Images/eraser.png" alt="Eraser - Erase your drawing"></div>
+<div id="clear"><img src="Images/bin.png" alt="Trash Can - Clear your canvas"></div>
+<div id="undo"><img src="Images/undo.svg" alt="Undo - Undo last stroke"></div>
 </section>
 
 <script>
     // Create JavaScript variables 
-    let canvasColor = "fffff"; // To be used on eraser
-    let brushColor = "000000"; // Default brush color
+    let canvasColor = "#ffffff"; // To be used on eraser
+    let brushColor = "#000000"; // Default brush color
     let painting = false;
     let brushSize = 15; 
+
+    // Canvas drawing variables
+    let lineJoinStyle = "round";
+    let lineCapStyle = "round";
 
     // Create Canvas Variables
     const CANVAS = window.document.querySelector('#canvas');
@@ -65,7 +69,7 @@ img {
     // Create menu variables 
     const COLORPICKER = window.document.querySelector('#colorpicker');
     const RANGEPICKER = window.document.querySelector('#rangepicker');
-    const ERASER = window.document.querySelector('#eraser');
+    const ERASER = window.document.querySelector('#erase');
     const CLEAR = window.document.querySelector('#clear');
     const UNDO = window.document.querySelector('#undo');
 
@@ -75,11 +79,86 @@ img {
     CANVAS.height =  window.innerHeight;
 
     // Add event listeners to menu items 
-    COLORPICKER.addEventListener('click', function(){alert('Colorpicker!')});
-    RANGEPICKER.addEventListener('click', function(){alert('Rangepicker!')});
-    ERASER.addEventListener('click', function(){alert('Erase!')});
-    CLEAR.addEventListener('click', function(){alert('Clear!')});
-    UNDO.addEventListener('click', function(){alert('Undo!')});
+    COLORPICKER.addEventListener('input', function(e)
+    {
+        brushColor = e.target.value;
+    });
+    
+    RANGEPICKER.addEventListener('input', function(e)
+    {
+        brushSize = e.target.value;
+    });
+    
+    ERASER.addEventListener('click', function()
+    {
+        brushColor = canvasColor;
+    });
+    
+    CLEAR.addEventListener('click', function()
+    {
+        alert('Clear!')}
+    );
+    
+    UNDO.addEventListener('click', function()
+    {
+        alert('Undo!')}
+    );
+
+    // Create Object to track x and y coordinates
+const MOUSE =
+{
+x: undefined,
+y: undefined,
+};
+
+// Create painting events (mousedown, mousemove, mouseup)
+CANVAS.addEventListener('mousedown', function(e)
+{
+painting = true; 
+// Capture X and Y coordinates
+MOUSE.x = e.x;
+MOUSE.y = e.y;
+
+// Start painting
+CTX.beginPath();
+CTX.moveTo(MOUSE.x, MOUSE.y);
+
+console.log(e);
+
+})
+
+CANVAS.addEventListener('mousemove', function(e)
+{
+//console.log(MOUSE.x + " " + MOUSE.y);
+MOUSE.x = e.x;
+MOUSE.y = e.y;
+
+draw();
+
+});
+
+CANVAS.addEventListener('mouseup', function()
+{
+painting = false;
+});
+
+
+function draw()
+{
+    if(painting == true)
+    {
+        CTX.strokeStyle = brushColor;
+        CTX.lineWidth = brushSize;
+        CTX.lineJoin = lineJoinStyle;
+        CTX.lineCap = lineCapStyle;
+
+        CTX.lineTo(MOUSE.x, MOUSE.y);
+        CTX.stroke();
+    }
+}
+
+
+    
 </script>
 </body>
 </html>
