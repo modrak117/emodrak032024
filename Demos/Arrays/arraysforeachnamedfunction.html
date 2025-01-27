@@ -1,0 +1,41 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays forEach Named Funcitons</title>
+    <style>
+        *{color-scheme: dark;}
+
+
+        /* END style */
+    </style>
+</head>
+<body>
+    <h1>Arrays forEach Named Funcitons</h1>
+
+
+
+    <script>
+        // Array of numbers
+        let numbers = [0,5,10,15];
+
+        numbers.forEach( multiplyByFive )
+        // numbers.filter( multiplyByFive )
+        // numbers.map( multiplyByFive )
+
+        // Call the Function
+        // multiplyByFive(10);
+
+        // Named function
+        function multiplyByFive(n, i){
+            alert(n*5 + " This is index " + i);
+        }
+
+<!-- END script -->
+    </script>
+
+
+<!-- END body -->
+</body>
+</html>
