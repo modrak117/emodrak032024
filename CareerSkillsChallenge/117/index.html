@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Mobile First Design */
+        body {
+            background-color: silver;
+            padding-top: 1rem;
+        }
+        #container {    
+            max-width: 1200px;
+            background-color: grey;
+            margin: auto;
+            border:5px solid black;
+        }
+        nav {
+            background-color: white;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: nav;
+        }
+        header {
+            background-color: darkorange;
+            padding: 1rem;
+            grid-area: hea;
+        }   
+        div#media{
+            background-color: grey;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: med;
+        }
+        main {
+            background-color: yellow;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: mai;
+        }
+        aside{
+            background-color: salmon;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: asi;
+        }
+        footer {
+            background-color: maroon;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: foo;
+        }
+        footer#subfooter {
+            background-color: white;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: sub;
+        }
+        /* Tablet and Desktop */
+        /* Media Queries */
+
+        @media screen and (min-width: 480px)
+        {
+            body{background-color: red;}
+            #container
+            {
+                display: grid;
+                gap: 10px;
+                grid-template-areas:
+                "nav nav nav nav"
+                "hea hea hea hea"
+                "med med med med"
+                "mai mai mai asi"
+                "foo foo foo foo"
+                "sub sub sub sub"
+                ;
+            }
+            div#media
+            {
+                min-height: 10rem;
+                transition: all 2s;
+            }
+            main
+            {
+                min-height: 10rem;
+                transition: all 2s;
+            }
+        }
+        @media screen and (min-width: 768px)
+        {
+            body{background-color: rgb(98, 24, 24);}
+        }
+        @media screen and (min-width: 1200px)
+        {
+            body{background-color: darkred;}
+            header{min-height: 10rem;}
+            div#media{min-height: 18rem;}
+            main{min-height: 30rem;}
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>Nav</nav>
+        <header>Header</header>
+        <div id="media">Media</div>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+        <footer id="subfooter"></footer>
+
+
+    </div>
+</body>
+</html>
