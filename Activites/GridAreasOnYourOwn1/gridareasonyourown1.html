@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas - On Your Own 1</title>
+
+    <style>
+        body{
+            background-color: yellow;
+            padding-top: 1rem;
+        }
+
+        #container{
+            max-width: 1200px;
+            background-color: purple;
+            margin:auto;
+            border: 1px solid black;
+            width: 80%;
+
+        }
+
+        #wrapper{
+            background-color: purple;    
+            max-width: 1000px;      
+            margin: auto;
+            padding: 1rem;
+            padding-top: 5rem;
+            
+
+        }
+        
+        #pageheader{
+            background-color: orange;
+            min-height: 8rem;
+            padding: 1rem;
+            grid-area: hea;
+        }
+
+        #intromedia{
+            background-color: lime;
+            min-height: 15rem;
+            padding: 1rem;
+            grid-area: med;
+        }
+        
+        #mainnav{
+            background-color: aqua;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: nav;
+        }
+
+        #pagemain{
+            background-color: white;
+            min-height: 18rem;
+            padding: 1rem;
+            grid-area: mai;
+        }
+
+        #pageaside{            
+            background-color: teal;
+            min-height: 18rem;
+            padding: 1rem;
+            grid-area: asi;
+            color: black;
+        }
+
+        #card001{
+            background-color: palevioletred;
+            min-height: 10rem;
+            padding: 1rem;
+            grid-area: one;
+        }
+
+        #card002{
+            background-color: skyblue;
+            min-height: 10rem;
+            padding: 1rem;
+            grid-area: two;
+        }
+
+        #card003{
+            background-color: lightgreen;
+            min-height: 10rem;
+            padding: 1rem;
+            grid-area: thr;
+        }
+
+        #pagefooter{
+            background-color: yellow;
+            min-height: 3rem;
+            padding: 1rem;
+            grid-area: foo;
+        }
+
+        #pagedetails{
+            background-color: lightgrey;
+            min-height: 15rem;
+            padding: 1rem;
+            grid-area: suf;
+        }
+
+        /* tablet and desktop */
+
+        @media screen and (min-width:768px)
+        {
+            body{
+                background-color: yellow;
+            }
+            
+            #wrapper{
+                display: grid;
+                gap: 10px;
+                grid-template-areas:
+                "hea hea hea"
+                "med med med"
+                "nav nav nav"
+                "mai mai asi"
+                "one two thr"
+                "foo foo foo"
+                "suf suf suf";
+                
+            }
+
+            #pageheader{
+                min-height: 7rem;
+            }
+
+            #intromedia{
+                min-height: 18rem;
+            }
+            
+            #mainnav{
+                min-height: 3rem;
+            }
+
+            #pagemain{
+                min-height: 30rem;
+            }
+
+            #pageaside{
+                min-height: 30rem;
+            }
+
+            #card001{
+                min-height: 10rem;
+            }
+
+            #card002{
+                min-height: 10rem;
+            }
+
+            #card003{
+                min-height: 10rem;
+            }
+
+            #pagefooter{
+                min-height: 3rem;
+            }
+
+            #pagedetails{
+                min-height: 20rem;
+            }
+        }
+
+
+
+            
+
+    </style>
+
+</head>
+<body>
+
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">#Pageheader</header>
+            <div id="intromedia">#Intromedia</div>
+            <nav id="mainnav">#Mainnav</nav>
+            <main id="pagemain">#Pagemain</main>
+            <aside id="pageaside">#Pageaside</aside>
+            <section id="card001">#Card001</section>
+            <section id="card002">#Card002</section>
+            <section id="card003">#Card003</section>
+            <footer id="pagefooter">#Pagefooter</footer>
+            <footer id="pagedetails">#Pagedetails</footer>
+        </div>
+    </div>
+    
+</body>
+</html>
