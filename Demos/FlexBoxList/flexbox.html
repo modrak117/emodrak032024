@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox List</title>
+    <style>
+        /* Mobile First */
+        nav {
+            background-color: #489;
+            padding: 1rem;
+        }
+        ul {
+            background-color: #198;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+        }
+        li {
+            background-color: salmon;
+            padding: 1rem;
+            border: 1px solid grey;
+            text-align: center;
+        }
+        /* Desktop Second */
+
+        @media screen and (min-width: 768px)
+        {
+
+            body{background-color: darkslategrey;}
+
+            ul {
+                flex-direction: row;
+                gap: 1rem;
+                justify-content: center;
+            }
+            
+            li {
+                min-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox List</h1>
+
+    <nav>
+        <ul>
+            <li><a href="google.html">Google</a></li>
+            <li><a href="instagram.html">Instagram</a></li>
+            <li><a href="twitter.html">Twitter</a></li>
+            <li><a href="espn.html">ESPN</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
