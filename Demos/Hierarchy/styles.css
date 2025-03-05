@@ -1,0 +1,35 @@
+body {
+    color: black;
+}
+
+h1 {
+    font-family: "Syne", sans-serif;
+}
+
+h2 {
+    font-family: "Syne", sans-serif;
+}
+
+p {
+    line-height: 1.7;
+    font-family: "Inter", sans-serif;
+}
+
+nav#topnav {
+    background-color: lightgrey;
+    font-family: "Inter", sans-serif;
+    padding: 1rem;
+}
+
+nav#topnav ul {
+    list-style-type: none;
+    padding: 1rem;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+nav#topnav ul li a {
+    color: white;
+    text-transform: capitalize;
+}

@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Areas - On Your Own 1</title>
-
+    <title>Grid Areas On Your Own 2</title>
     <style>
-        body{
+        body {
             background-color: yellow;
-            padding-top: 1rem;
         }
-
+        
         #container{
             max-width: 1200px;
             background-color: purple;
             margin:auto;
             border: 1px solid black;
             width: 80%;
-
         }
 
         #wrapper{
@@ -26,143 +23,117 @@
             margin: auto;
             padding: 1rem;
             padding-top: 5rem;
-            
-
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
         
         #pageheader{
             background-color: orange;
-            min-height: 8rem;
+            /* min-height: 8rem; */
             padding: 1rem;
             grid-area: hea;
+            display: grid;
         }
-
-        #intromedia{
+        
+        #mainnav{
+            display:grid;
+            background-color: aqua;
+            /* min-height: 5rem; */
+            padding: 1rem;
+            grid-area: nav;           
+        }
+        
+        #media{
             background-color: lime;
-            min-height: 15rem;
+            /* min-height: 15rem; */
             padding: 1rem;
             grid-area: med;
         }
         
-        #mainnav{
-            background-color: aqua;
-            min-height: 5rem;
-            padding: 1rem;
-            grid-area: nav;
-        }
-
         #pagemain{
             background-color: white;
-            min-height: 18rem;
+            /* min-height: 18rem; */
             padding: 1rem;
             grid-area: mai;
         }
-
-        #card001{
+        
+        #card001, #card002{
+            display:grid;
+            /* min-height: 200px; */
+        }
+        
+        #card1{
             background-color: palevioletred;
-            min-height: 10rem;
+            /* min-height: 5rem; */
             padding: 1rem;
             grid-area: one;
         }
 
-        #card002{
+        #card2{
             background-color: skyblue;
-            min-height: 10rem;
+            /* min-height: 5rem; */
             padding: 1rem;
             grid-area: two;
         }
 
         #pagefooter{
             background-color: yellow;
-            min-height: 3rem;
+            /* min-height: 3rem; */
             padding: 1rem;
             grid-area: foo;
         }
-
+        
         #pagedetails{
             background-color: lightgrey;
-            min-height: 15rem;
-            padding: 1rem;
+            display: grid;
             grid-area: suf;
+            /* min-height: 200px; */
+            padding: 1rem;
         }
-
-        /* tablet and desktop */
-
-        @media screen and (min-width:768px)
-        {
-            body{
-                background-color: yellow;
-            }
-            
+        
+        /* Desktop Layout */
+        @media screen and (min-width: 767px){
             #wrapper{
+                background-color: yellow;
                 display: grid;
-                gap: 10px;
-                grid-template-areas:
+                gap:10px;
+                background-color: purple;
+                grid-template-rows: 150px 80px 500px 300px 150px 150px;
+                grid-template-areas: 
                 "hea hea hea"
                 "med med med"
-                "nav nav nav"
-                "mai mai asi"
-                "one two thr"
+                "nav mai mai"
+                "nav one two"
                 "foo foo foo"
-                "suf suf suf";
-                
+                "suf suf suf"                
+                ;
             }
-
-            #pageheader{
-                min-height: 7rem;
+            #card1{
+                min-height: 100px;
+                background-color: lightblue;
             }
-
-            #intromedia{
-                min-height: 18rem;
+            #card2{
+                min-height: 100px; 
+                background-color: tomato;}
             }
-            
-            #mainnav{
-                min-height: 3rem;
-            }
-
-            #pagemain{
-                min-height: 30rem;
-            }
-
-            #card001{
-                min-height: 10rem;
-            }
-
-            #card002{
-                min-height: 10rem;
-            }
-
-            #pagefooter{
-                min-height: 3rem;
-            }
-
-            #pagedetails{
-                min-height: 20rem;
-            }
-        }
-
-
-
+        
             
 
     </style>
-
 </head>
 <body>
-
-    <div id="container">
+    <div class="container">
         <div id="wrapper">
-            <header id="pageheader">#Pageheader</header>
-            <div id="intromedia">#Intromedia</div>
-            <nav id="mainnav">#Mainnav</nav>
-            <main id="pagemain">#Pagemain</main>
-
-            <section id="card001">#Card001</section>
-            <section id="card002">#Card002</section>
-            <footer id="pagefooter">#Pagefooter</footer>
-            <footer id="pagedetails">#Pagedetails</footer>
+            <header id="pageheader">#pageheader</header>
+            <nav id="mainnav">#mainnav</nav>
+            <div id="media">#intromedia</div>
+            <main id="pagemain">#pagemain</main> 
+                <section id="card1">#card001</section>
+                <section id="card2">#card002</section>
+                <footer id="pagefooter">#pagefooter</footer>
+                <div id="pagedetails">#pagedetails</div>
         </div>
     </div>
-    
+
 </body>
 </html>
