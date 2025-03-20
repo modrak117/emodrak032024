@@ -1,0 +1,235 @@
+:root {
+    --color-primary: #3a1d14;
+    --color-secondary: #fb9a4a;
+    --color-tertiary: black;
+    --color-quaternary: silver;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    background-color: white;
+    min-height: 12rem;
+    max-width: 75rem;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: auto;
+    position: relative;
+    box-shadow: 6px 6px 6px 1px  black;
+    /* border: 1px solid black; */
+}
+#pageheader {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
+#pageheader .container {
+    background-color: #3a1d14;
+    box-shadow:none;
+}
+
+#logo {
+    background-color: var(--color-primary);
+    background-image: url(Images/usaarpanetrustuniversities.png);
+    border: 1px solid #fb9a4a;
+    background-size: cover;
+    background-position: center center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 75px);
+    transition: all 2s;
+    box-shadow: 6px 6px 6px 1px  black;
+    z-index:1;
+}
+/* ---------------------- */
+#pagenav {
+    background-color: none;
+    color: white;
+    min-height: 40px;
+    /* Adust as needed */	
+    min-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0px;
+    /* Update from 150 to 200 */
+    /* Use 1/2 width of min-width */
+    left: calc(50% - 225px);
+
+    /* left: calc(50% - 154px);  */
+    /* justify-content: space-around; */
+}
+#pagenav a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#topnav {
+    background-color: #2D1119;
+    min-height: 75px;
+    padding: 1rem;
+    text-align: center;
+    color:white;
+}
+#topnav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#F29447;
+    padding:1rem;
+}
+
+#topnav .container {
+    min-height: 2rem;
+    background-color:#3A1D14;
+    box-shadow:none;
+}
+
+
+
+
+
+#media {
+    background-color: var(--color-tertiary);
+    background-image: url(Images/usaarpanetrustuniversities.png);
+    background-size: cover;
+    color: white;
+    min-height: 300px;
+    padding: 1rem;
+}
+#media h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 6px 6px 1px  black, -1px -1px 1px black;
+}
+#media h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 6px 6px 1px  black, -1px -1px 1px black;
+
+}
+#media blockquote {
+    background-color: rgba(255, 255, 255, 0.25);
+    max-width: 50ch;
+    line-height: 1.7;
+    margin: auto;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-shadow: 2px 2px 2px black;
+}
+
+#career {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+}
+#pagecontent {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+}
+#keyassignments {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+}
+#semester1 {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+}
+#semester2 {
+    background-color: var(--color-primary);
+    min-height: 200px;
+    padding: 1rem;
+    display: block;
+}
+#pagefooter {
+    background-color: var(--color-primary);
+    min-height: 75px;
+    padding: 1rem;
+    text-align: center;
+}
+#pagefooter a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#pagefooter .container {
+    min-height: 2rem;
+}
+
+#subfooter {
+    background-color: var(--color-tertiary);
+    min-height: 200px;
+    padding: 1rem;
+}
+
+#subfooter .container {
+    background-color: var(--color-tertiary);
+    color: white;
+}
+
+.footerlinks {
+    display: none;
+    
+}
+.footerlinks a
+{
+    color:#fb9a4a;
+}
+
+/* a {
+    padding: 1rem;
+} */
+
+/*  Tablet and Desktop Styles */
+/* Use media queries to detect browser window size */
+
+@media screen and (min-width: 321px) {
+}
+
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+    #flexsubfooter {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerlinks {
+        display: block;
+        min-width: 200px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #logo {
+        left: 25px;
+    }
+    #media {
+        padding-top: 10rem;
+        height: 350px;
+    }
+    #pagenav {
+        top: 0px;
+        right: 0px;
+        left: auto;
+        bottom: auto;
+    }
+    #pageheader .container {
+        min-height: 3.5rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #media {
+        height: 600px;
+        background-position: left center;
+    }
+}

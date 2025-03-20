@@ -1,343 +1,211 @@
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Evan Modrak - Portfolio</title>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Evan Modrak- Portfolio</title>
 
-<style>
-/* Mobile First Design */
-/* 
-Note
-primary, secondary, tertiary, quaternary, quinary, senary, septenary, octonary, nonary, denary, duodenary, etc.
-*/
-html {
-scroll-behavior: smooth;
-background-color: white;
-filter: brightness(75%);
-color: beige;
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<!-- begin pageheader -->
+		<header id="pageheader">
+			<div class="container">
+				<a href="https://mchagoyan032024.netlify.app/">
+					<div id="logo"></div>
+				</a>
+				<nav id="pagenav">
+					<a href="index.html">Home</a>
+					|
+					<a href="worksamples.html">Work Samples</a>
+					|
+					<a href="certificates.html">Certificates</a> 
+					
+				</nav>
+			</div>
+		</header>
+		<!-- end pageheader -->
 
-
-}
-body::-webkit-scrollbar{
-    display: none;
-} 
-      /* Reset browser */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-          /* Fix Browser Bounce */
-        body {
-        overflow-x: auto;
-        width: 100%;
-        overscroll-behavior: none;
-    }
-    /* Set page Color with functions/variables */
-:root{
-    --color-primary: #1D1D1D;
-    --color-secondary: #D1CAC4;
-    --color-tertiary: #D8CBC4;
-    --color-quinary: #F3F2EF;
-    --color-quaternary: white;
-}
-h2{
-    color: var(--color-quinary);
-}
-.container {
-    background-color: var(--color-tertiary);
-    min-height: 10rem;
-    max-width: 75rem;
-    padding: 1rem 3rem 1rem 3rem;
-    margin: auto;
-    position: relative;
-    border: 1px solid white;
-}
-#pageheader {
-    background-color: var(--color-primary);
-    min-height: 200px;
-    padding: 1rem;
-    /* border-radius: 10px 10px 0 0 ; */
-    margin: auto;
-}
-#pageheader .container{
-    border: 4px solid var(--color-quinary);
-}
-#logo {
-    background-color: none;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    left: calc(50% - 75px);
-    transition: all 2s;
-    background-image: url(Images/dc-logo02.png);
-    background-size: contain;
-    transition: all 5s;
-}
-#logo:hover{
-transform: rotate(15deg);
-}
-#pagenav {
-    /* background-color: var(--color-quaternary); */
-    min-height: 40px;
-    width: 300px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    bottom: 0px;
-    left: calc(50% - 150px);
-
-}
-#pagenav a{
-    color: var(--color-quinary);
-    text-decoration: none;
-}
-#pagenav a:hover{
-    text-decoration: underline;
-}
-#media {
-    background-color: var(--color-primary);
-    min-height: 300px;
-    padding: 1rem;
-    /* background-image: url(Images/orangeleaves.png); */
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#media h1{
-    text-align: center;
-    font-size: 3rem;
-}
-#media h2 {
-    text-align: center;
-    font-size: 2rem;
-}
-#media blockquote {
-    background-color: white;
-    margin: auto;
-    max-width: 50%;
-}
-#career {
-    background-color: var(--color-primary);
-        min-height: 200px;
-        padding: 1rem;
-}
-#pagecontent {
-    background-color: var(--color-primary);
-        min-height: 200px;
-        padding: 1rem;
-}
-p {
-    line-height: 2;
-}
-#semester1 {
-    background-color: var(--color-quaternary);
-    min-height: 200px;
-    padding: 1rem;
-}
-#semester2 {
-    background-color: var(--color-primary);
-    min-height: 200px;
-    padding: 1rem;
-}
-#pagefooter {
-    background-color: var(--color-quinary);
-    min-height: 75px;
-    padding: 1rem;
-    text-align: center;
-}
-#pagefooter a{
-    color: var(--color-quinary);
-}
-#pagefooter .container{
-    height: 2rem;
-}
-#subfooter {
-    background-color: var(--color-secondary);
-    min-height: 200px;
-    padding: 1rem;
-}
-#top{
-    width: 55px;
-    height: 55px;
-    background-color: var(--color-quinary);
-    border: 1px solid var(--color-primary);
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    right: 30px;
-    bottom: 20px;
-    border-radius: 14px 14px 16px 16px;
-    cursor: pointer;
-}
-#top a{
-    text-decoration: none;
-    color: var(--color-primary);
-}
-#top a:hover{
-    text-decoration:underline;
-}
-/* a {
-padding: 1rem;
-} */
-
-/* Tablet and Desktop Styles */
-/* Use media queries to detect browser window size */
-
-
-@media screen and (min-width: 1024px) {
-    html{
-        background-color: black;
-    }
-    #career {
-        background-color: white;
-    }
-    #logo {
-        left: 25px;
-    }
-    #media {
-        height: 450px;
-    }
-    #pagenav {
-        top: 0px;
-        right: 0px;
-        left: auto;
-        bottom: auto;
-    }
-}
-@media screen and (min-width: 1200px) {
-    html{
-        background-color: white;
-    }
-    #career {
-        background-color: var(--color-secondary);
-    }
-    #media {
-        height: 600px;
-    }
-} 
-/* #subfooter{
-    border-radius:0px 0px 25px 25px ;
-} */
-</style>
-</head>
-<body>
-    <!-- Named anchor to navigate to the top. -->
-    <a name="topanchor"></a>
-<!-- begin pageheader -->
-<header id="pageheader">
-        <div class="container">
-<div id="logo"></div>
-<nav id="pagenav">
-    <a href="#career">Career</a>
-    |
-    <a href="#semester1">Semester 1</a>
-    |
-    <a href="#semester2">Semester 2</a>
-</nav>
-</div>
-</header>
-<!-- end pageheader -->
-
-<!-- begin media -->
-<section id="media">Media
-    
-</section>
-<!-- end media -->
-<h1>Evan Mdorak</h1>
-<h2>Portfolio</h2><blockquote></blockquote>
-
-<!-- begin career -->
-<section id="career">
-<div class="container">
-<a name="career"></a>
-<h2>Career</h2>
-<ul>
-    <li><a href="Career/Letter of Introduction.pdf" target="_new">Letter of Introduction</a></li>
-    <li><a href="Career/Resume.pdf" target="new">Resume</a></li>
-    <li><a href="Career/References.pdf" target="new">Refrences</a></li>
-    <li><a href="Career/JobApplication.pdf" target="new">Job Application</a></li> 
-    <li><a href="Career/Career Action Plan.pdf" target="new">Career Plan</a></li>
-    <li>Work Samples</li>
-    <li>Certificate</li>
-</ul>
-</div>
-</section>
-<!-- end career -->
-
-<!-- begin pagecontent -->
-<main id="pagecontent">
-<div class="container">
-    <h2>Introduction</h2>
-    <h3> Git Clone</h3>
-    <p>Hello, and welcome to my crappy Portfolio. My name is Evan Modrak, and this will be my 3rd year taking Web Page Design class at Coalinga Highschool. Another class that I would say I enjoy is Mock Trial. The reason why is because I have been interested in court cases and shows, and me getting the oppurtinity to fullfill this excitement is great. Some other things that I enjoy other than this class and Mock Trial, would be music, weights, fashion, and motorcycles. My most favotire hobby out of all though are the motorcycles. Reason being is because I like to go fast having grown up around them as well as my past parents riding them in the past. Who gave me my most inpiration to get a motorcycle was my Dad. He rode a Kawaski Ninja 636 which was all whited out with white gear. Me hearing the stories of him riding astonished me at has kept me intersted ever since.  </p>
-</div>
-</main>
-<!-- end pagecontent -->
-
-<!-- begin semester1 -->
-<section id="semester1">
-<div class="container">
-<a name="semester1"></a>
-<h2>Semester1</h2>
-<ul>
-    <li><a href="Activites/CanvasSmileyFace/canvassmileyface.html" target="_new">Canvas Smiley Face</a></li>
-    <li>A003</li>
-    <li>A004</li>
-    <li><a href="Demos/Objects/motorcycle.html">Objects</a></li>
-</ul>
-</div>
-</section>
-<!-- end semester1 -->
-
-<!-- begin semester2 -->
-<section id="semester2">
-<div class="container">
-<a name="semester2"></a>
-<h2>Semester2</h2>
-<ul>
-    <li><a href="Activites/PersonalizedArrays/personalizedarrays.html">Arrays</a></li>
-    <li><a href="Projects/paintingappv3.html">PaintingApp3</a></li>
-    <li><a href="CareerSkillsChallenge/117/index.html">CSSGridAreas</a></li>
-    <li><a href="Activites/GridAreasOnYourOwn1/gridareasonyourown1.html">GridAreasOnYourOwn1</a></li>
-    <li><a href="Demos/FlexBoxList/flexbox.html">Flexbox List</a></li>
-    <li><a href="Activites/GridAreasOnYourOwn1/gridareasonyourown2.html">GridAreasOnYourOwn2</a></li>
-</ul>
-</div>
-</section>
-<!-- end semester2 -->
+		<!-- begin topnav -->
+		<nav id="topnav">
+			<div class="container">
+				<a href="#career">Career</a> |
+				<a href="#semester1">Semester 1</a> |
+				<a href="#semester2">Semester 2</a> |
+				<a href="#keyassignments">Key Assignments</a> 
+			</div>
+		</nav>
+		<!-- end topnav -->
 
 
 
-<!-- begin pagefooter -->
-<footer id="pagefooter">    
-<div class="container">
-    <a href="https://www.chsserver01.org/ " target="_blank">chago</a> |
-    <a href="https://www.w3schools.com/colors/colors_schemes.asp" target="_blank" >color schemes</a> |
-    <a href="#003" target="_blank" >aeries</a></a> |
-    <a href="#004" target="_blank" >chs</a> |
-    <a href="#005" target="_blank" >mycareertech</a> | 
-    <a href="#006" target="_blank" >classroom</a> | 
-    <a href="#007" target="_blank" >codepip</a> |
-    <a href="#008" target="_blank" >minga</a>
-</div>
-</footer>
-<!-- end pagefooter -->
+		<!-- begin media -->
+		<section id="media">
+			<h1>Manuel Chagoyan</h1>
+			<h2>Portfolio</h2>
+			<blockquote>
+ 				If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner. - Omar Bradley (General, US Army)
+			</blockquote>
+		</section>
+		<!-- end media  -->
 
-<!-- begin subfooter -->
-<footer id="subfooter">
-    <div class="container">PageFooter</div>
-    </footer>
-    <!-- end subfooter -->
-<div id="top">
-    <a href="#topanchor">Top</a>
-</div>
-</body>
+		<!-- begin career -->
+		<section id="career">
+			<div class="container">
+				<a name="career"></a>
+				<h2>Career</h2>
+				<ul>
+					<li>Letter of Introduction</li>
+					<li>Resume</li>
+					<li>References</li>
+					<li>Job Application</li>
+					<li>Career Plan</li>
+					<li>Work Samples</li>
+					<li>Certificates</li>
+				</ul>
+			</div>
+		</section>
+		<!-- end career -->
+
+		<!-- begin pagecontent -->
+		<main id="pagecontent">
+			<div class="container">
+				<h2>Introduction</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+					voluptates cumque voluptatibus neque provident, illum laudantium,
+					cupiditate deserunt natus atque odit totam quidem vero suscipit
+					officiis eligendi? Vitae maxime veniam veritatis autem perferendis
+					unde hic animi magni debitis in placeat tempore esse similique ipsam
+					et doloribus reiciendis impedit reprehenderit, nisi, molestiae quis
+					ut! Fuga blanditiis sunt officia, maxime laudantium culpa obcaecati
+					molestias nobis totam reiciendis quis dolor tempora doloribus
+					veritatis earum quod, cumque cum eligendi accusamus. Laboriosam aut ea
+					rem esse magni explicabo ad reiciendis iste, ab perspiciatis sit ut!
+				</p>
+
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+					deleniti, quis similique nihil alias eligendi molestias in possimus?
+					Mollitia, est. Iure iusto corporis soluta expedita veniam non qui
+					ipsum perspiciatis, odit, maxime aliquid repudiandae! Quod, a qui!
+					Adipisci nesciunt vero quibusdam quo, laudantium, maiores quos nulla
+					facilis rem aliquid recusandae et tempora molestias similique
+					provident accusamus. A sed voluptatem cum, labore modi doloribus
+					praesentium suscipit molestias fuga velit ducimus mollitia explicabo
+					ipsa dolores fugiat cupiditate expedita soluta. Eveniet, eum quidem.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+					deleniti, quis similique nihil alias eligendi molestias in possimus?
+					Mollitia, est. Iure iusto corporis soluta expedita veniam non qui
+					ipsum perspiciatis, odit, maxime aliquid repudiandae! Quod, a qui!
+					Adipisci nesciunt vero quibusdam quo, laudantium, maiores quos nulla
+					facilis rem aliquid recusandae et tempora molestias similique
+					provident accusamus. A sed voluptatem cum, labore modi doloribus
+					praesentium suscipit molestias fuga velit ducimus mollitia explicabo
+					ipsa dolores fugiat cupiditate expedita soluta. Eveniet, eum quidem.
+				</p>
+			</div>
+		</main>
+		<!-- end pagecontent -->
+
+		<!-- begin semester1 -->
+		<section id="semester1">
+			<div class="container">
+				<a name="semester1"></a>
+				<h2>Semester1</h2>
+				<ul>
+					<li>Assignment001</li>
+					<li>Assignment002</li>
+					<li>Assignment003</li>
+				</ul>
+			</div>
+		</section>
+		<!-- end semester1 -->
+
+		<!-- begin semester2 -->
+		<section id="semester2">
+			<div class="container">
+				<a name="semester2"></a>
+				<h2>Semester2</h2>
+				<ul>
+					<li>Assignment001</li>
+					<li>Assignment002</li>
+					<li>Assignment003</li>
+				</ul>
+			</div>
+		</section>
+		<!-- end semester2 -->
+
+		<!-- begin keyassignments -->
+		<div id="keyassignments">
+			<div class="container">
+				<a name="keyassignments"></a>
+				<h2>Key Assignments</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+					voluptates cumque voluptatibus neque provident, illum laudantium,
+					cupiditate deserunt natus atque odit totam quidem vero suscipit
+					officiis eligendi? Vitae maxime veniam veritatis autem perferendis
+					unde hic animi magni debitis in placeat tempore esse similique ipsam
+					et doloribus reiciendis impedit reprehenderit, nisi, molestiae quis
+					ut! Fuga blanditiis sunt officia, maxime laudantium culpa obcaecati
+					molestias nobis totam reiciendis quis dolor tempora doloribus
+					veritatis earum quod, cumque cum eligendi accusamus. Laboriosam aut ea
+					rem esse magni explicabo ad reiciendis iste, ab perspiciatis sit ut!
+				</p>
+			</div>
+		</div>
+		<!-- end keyassignments -->
+
+		<!-- begin pagefooter -->
+		<footer id="pagefooter">
+			<div class="container">
+				<a href="https://chago.dev" target="new">chago</a> |
+				<a href="https://color.adobe.com/create/color-wheel" target="new"
+					>color schemes</a
+				>
+				| <a href="https://coalingahuron.aeries.net/" target="new">aeries</a> |
+				<a href="https://chs.chusd.org/" target="new">chs</a> |
+				<a href="https://mycareertech.com/" target="new">mycareertech</a> |
+				<a href="https://classroom.google.com" target="new">classroom</a> |
+				<a href="https://codepip.com" target="new">codepip</a> |
+				<a href="https://minga.io/">minga</a>
+			</div>
+		</footer>
+		<!-- end pagefooter -->
+
+		<!-- begin subfooter -->
+		<footer id="subfooter">
+			<div class="container">
+				<!-- <h2>PageFooter</h2> -->
+
+				<div id="flexsubfooter">
+					<div class="quote">
+						<h3>Final Thoughts</h3>
+						<blockquote>
+							When I was young I thought that money was the most important thing
+							in life; now that I am older I know that it is.
+						</blockquote>
+						<p>- Oscar Wilde</p>
+					</div>
+
+					<div class="footerlinks">
+						<h3>Links</h3>
+						<ul>
+							<li><a href="#career">Career</a></li>
+							<li><a href="#semester1">Semester1</a></li>
+							<li><a href="#semester2">Semester2</a></li>
+							<li><a href="#keyassignments">Key Assignments</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end subfooter -->
+	</body>
 </html>

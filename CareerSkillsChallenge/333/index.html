@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 3</title>
+    <style>
+        /* Mobile Design */
+        body {
+            background-color: lightgrey;
+        }
+        #pageheader {
+            
+        }
+        #topnav ul {
+
+        }
+
+
+        #container {
+            background-color: darkgrey;
+            max-width: 1200px;
+            width: 90%;
+            padding: 1rem;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            margin: auto;
+        }
+        #wrapper {
+            background-color: slategrey;
+            max-width: 90%;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 600px;
+            grid-template-rows: repeat (8, 1fr);
+            grid-template-areas: 
+            "medi"
+            "midn"
+            "main"
+            "sec1"
+            "sec2"
+            "sec3"
+            "pagef"
+            "subf";
+
+        }
+        #media {
+            background-color: black;
+            padding: 1rem;
+            grid-area: medi;
+            position: relative;
+        }
+        #logo {
+            background-color: silver;
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            border-radius: 50%;
+        }
+        #midnav {
+            background-color: grey;
+            padding: 1rem;
+            grid-area: midn;
+        }
+        #midnav ul {
+
+        }
+        main {
+            background-color: white;
+            padding: 1rem;
+            grid-area: main;
+        }
+
+        /* Three Sections */
+        .cards{
+            background-color: silver;
+            padding: 1rem;
+            border: 1px solid white;
+            border-radius: 6px;
+        }   
+
+        #sectionone{grid-area:sec1;}
+        #sectiontwo{grid-area:sec2;}
+        #sectionthree{grid-area:sec3;}
+
+        #pagefooter{
+            background-color: grey;
+            padding: 1rem;
+            grid-area: pagef;
+        }
+        #subfooter{
+            background-color: maroon;
+            padding: 1rem;
+            grid-area: subf
+        }
+
+        /* Desktop Design */
+        @media screen and (min-width: 768px) {
+            #wrapper {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "medi medi medi"
+                "midn main main"
+                "sec1 sec2 sec3"
+                "pagef pagef pagef"
+                "subf subf subf";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">
+                #pageheader
+                <nav id="topnav">
+                    <ul>
+                        <li>Yahoo</li>
+                        <li>Google</li>
+                        <li>EPSN</li>
+                        <li>Chess</li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="media">
+                #media
+                <div id="logo"></div>
+            </div>
+
+            <nav id="midnav">
+                #midnav
+                <ul>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                    <li>Yahoo</li>
+                </ul>
+            </nav>
+
+            <main>
+                main - layoutthree
+            </main>
+
+            <section id="sectionone" class="cards">#sectionone</section>
+            <section id="sectiontwo" class="cards">#sectiontwo</section>
+            <section id="sectionthree" class="cards">#sectionthree</section>
+
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="subfooter">#subfooter</footer>
+
+        </div>
+        <!--end wrapper-->
+    </div>
+    <!--end container-->
+</body>
+</html>

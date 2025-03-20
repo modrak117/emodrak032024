@@ -1,0 +1,171 @@
+body {
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #f9f9f9; 
+    color: #e62625;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+header p{
+    color: #79523d;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Georgia', serif; 
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    background-image: url(Images/petManiaLogo.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transform: scale(0.5);
+}
+
+/* .logo img {
+    width: 200px; 
+    position: absolute;
+    left: 0px;
+    top: 25px;
+    transform: scale(0.5);
+} */
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: teal; 
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700; 
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    max-width: 50%;
+    font-weight: normal;
+}
+
+.hero-text h2 {
+    color: #333; 
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.hero img {
+    max-width: 45%;
+    border-radius: 10px;
+}
+
+/* Pet Listings Grid */
+.pet-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pet-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.pet-card p {
+    margin: 0 15px 15px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: teal; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (min-width: 600px)
+{
+    .logo {
+        transform: scale(1);
+    }
+}
