@@ -7,17 +7,18 @@
         <style>
             body{
                 font-family: Arial, Helvetica, sans-serif;
+                color: wheat;
             }
             h1,h2,h3{
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 color: black;
             }
             figure{
-                background-color: none;
+                background-color: none;   
             }
             figcaption{
                 text-align: right;
-                color: red;
+                color: #333;
             }
             #wrapper{
                 max-width: 80%;
@@ -35,22 +36,28 @@
                     margin: auto;
                     max-width: 80%;
                     height: auto;
-                    box-shadow: 2px 0px 0px 2px lightblue ;
                 }
-                .rightimage{
+                figure.rightimage{
                     float: right;
                     max-width: 80%;
                     height: auto;
                     margin: 1rem;
-                    box-shadow: 2px 0px 0px 2px lightblue ;
                 }
 
-                .leftimage{
+                figure.leftimage{
                     float: left;
                     max-width: 80%;
                     height: auto;
                     margin: 1rem;
-                    box-shadow: 2px 0px 0px 2px grey ;
+                }
+
+                img{
+                    max-width: 100%;
+                }
+
+                figcaption {
+                    text-align: center;
+                    padding: 1rem;
                 }
 
         </style>
@@ -62,25 +69,25 @@
                 <!-- <img src="Images/Untitled-4.png" alt="code001"> -->
                 <h1>Floated Images</h1>
 <figure>
-                    <img src="Images/blackkeyboard.png" alt="Black Keyboard" class="centerimage" >
+                    <img src="Images//keyboard.jpg" alt="Black Keyboard" class="centerimage" >
         <figcaption>
             Logitech Keyboard A500.
         </figcaption>
 </figure>        
         
-        <!-- Paragrahs -->
+        <!-- Paragraphs -->
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere deserunt consequuntur saepe laborum autem minus voluptatem molestias dolore alias adipisci numquam fugiat qui accusamus error, atque inventore, vel quod impedit. Eius optio provident, cupiditate laboriosam molestiae similique doloribus, voluptas commodi iusto, fugiat itaque quos unde omnis dolores in totam dolore aspernatur temporibus vero ex eaque. Ad expedita accusantium eius hic, libero soluta totam suscipit sed pariatur deserunt asperiores laboriosam ut quas adipisci tempora eligendi consequatur. Ex quidem animi exercitationem magnam unde? Enim non commodi nam eius doloribus officia, quod praesentium molestias suscipit debitis hic repudiandae fugit reprehenderit soluta explicabo. Id!</p>
-<figure>
-            <img class="centerimage" src="Images/code-blue.png" alt="Screen with blue code">
+<figure class="rightimage">
+            <img src="Images/code.jpg" alt="Screen with blue code">
     <figcaption>
         Screen with blue code on a windows machine.
     </figcaption>
 </figure>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere deserunt consequuntur saepe laborum autem minus voluptatem molestias dolore alias adipisci numquam fugiat qui accusamus error, atque inventore, vel quod impedit. Eius optio provident, cupiditate laboriosam molestiae similique doloribus, voluptas commodi iusto, fugiat itaque quos unde omnis dolores in totam dolore aspernatur temporibus vero ex eaque. Ad expedita accusantium eius hic, libero soluta totam suscipit sed pariatur deserunt asperiores laboriosam ut quas adipisci tempora eligendi consequatur. Ex quidem animi exercitationem magnam unde? Enim non commodi nam eius doloribus officia, quod praesentium molestias suscipit debitis hic repudiandae fugit reprehenderit soluta explicabo. Id!</p>
         
-<figure>
-            <img src="Images/Untitled-4.png" alt="Screen with colorful code" class="centerimage">
-<figcaption>Code with Linux.</figcaption>
+<figure class="leftimage">
+            <img src="Images/keyboard2.jpg" alt="Screen with colorful code">
+            <figcaption>Code with Linux.</figcaption>
 </figure>
 
 
