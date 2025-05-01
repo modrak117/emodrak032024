@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Forms</title>
+
+<link rel="stylesheet" href="redtheme.css" id="linktheme">
+
+<style>
+
+h1 {
+color: black;
+text-align: center;
+}
+
+#formcontainer {
+width: 60%;
+max-width: 600px;
+min-height: 300px;
+padding: 1rem;
+background-color: silver;
+border: 2px solid black;
+margin: auto;
+}
+
+p {
+background-color: white;
+border: 1px solid black;
+padding: 1rem;
+margin: auto;
+max-width: 500px;
+min-height: 200px;
+}
+
+fieldset {
+padding: 1rem;
+margin: 1rem;
+}
+
+legend {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+padding: .25rem;
+}
+
+input[type="text"] {
+background-color: white;
+border: 2px solid black;
+}
+
+input[type='text']::placeholder {
+color: gray;
+font-style: italic;
+}
+
+button {
+padding: .5rem;
+background-color: black;
+color: white;
+margin-bottom: .5rem;
+margin-top: .5rem;
+}
+
+input[name='language'] {
+outline: 2px solid black;
+outline-style: dashed;
+}
+
+input[name='language']:checked {
+accent-color: crimson;
+outline-color: crimson;
+}
+</style>
+</head>
+
+<body>
+<h1>HTML Forms</h1>
+
+<div id="formcontainer">
+
+
+<fieldset>
+<legend>Text Input Element</legend>
+<label for="textname">Enter your name:</label><br>
+<input type="text" id="textname" placeholder="Your Name">
+<br>
+<button id="savetextbutton">Save Text to Local Storage</button>
+<button id="loadtextbutton">Load Text from Local Storage</button>
+</fieldset>
+
+<fieldset>
+<legend>Radio Input Element</legend>
+
+
+<input type="radio" id="radhtml" value="html" name="language"><label for="radhtml">HTML</label>
+<input type="radio" id="radcss" value="css" name="language"><label for="radcss">CSS</label>
+<input type="radio" id="radjavascript" value="javascript" name="language"><label
+for="radjavascript">JavaScript</label>
+<br>
+
+<button id="saveradiobutton">Save Radio to Local Storage</button>
+<button id="loadradiobutton">Load Radio from Local Storage</button>
+</fieldset>
+
+<fieldset>
+<legend>Select Element</legend>
+<select name="themeselector" id="themeselector" onchange="updateTheme()">
+<option value="redtheme.css">Red Theme</option>
+<option value="greentheme.css">Green Theme</option>
+<option value="pinktheme.css">Pink Theme</option>
+</select>
+
+<br>
+
+<!-- <button id="saveselectbutton">Save Select to Local Storage</button>
+<button id="loadselectbutton">Load Select from Local Storage</button> -->
+
+</fieldset>
+
+<p name="paragraphoutput" id="paragraphoutput"></p>
+
+</div>
+
+
+<script>
+// The display paragraph
+const paragraphOutput = document.getElementById('paragraphoutput');
+
+//alert(paragraphOutput);
+
+/*
+Text Section
+Add event listeners to buttons when the save button is clicked
+save to local storage
+*/
+let saveTextButton;
+saveTextButton = document.querySelector('#savetextbutton');
+//alert(saveTextButton);
+let loadTextButton;
+loadTextButton = document.querySelector('#loadtextbutton');
+//alert(loadTextButton);
+
+// Add event listeners
+saveTextButton.addEventListener('click', function () {
+let textName;
+textName = document.querySelector('#textname').value;
+
+if (textName.trim() !== "") {
+localStorage.setItem('textUserName2325', textName);
+alert("Name saved to local storage")
+}
+else {
+alert("Please enter a name before saving.");
+}
+
+});
+
+loadTextButton.addEventListener('click', function () {
+let savedTextName;
+savedTextName = localStorage.getItem('textUserName2325');
+
+if (savedTextName !== null) {
+paragraphOutput.textContent = `Hello, ${savedTextName}!`;
+}
+else {
+paragraphOutput.textContent = "No name found in localStorage."
+}
+
+/*
+Radio Section
+*/
+
+
+
+});
+
+
+let savedRadioButton;
+savedRadioButton = document.querySelector('#saveradiobutton');
+// alert(savedRadioButton);
+
+let loadRadioButton;
+loadRadioButton = document.querySelector('#loadradiobutton');
+//alert(loadRadioButton);
+
+savedRadioButton.addEventListener('click', function () {
+let selectedRadio;
+selectedRadio = document.querySelector('input[name="language"]:checked');
+
+//alert(selectedRadio);
+
+if (selectedRadio == null) {
+alert('Please select a language before saving');
+}
+else {
+localStorage.setItem('selectedLanguage2325', selectedRadio.value);
+alert("Selected language saved to local storage")
+}
+});
+
+loadRadioButton.addEventListener('click', function(){
+  let savedLanguage;
+  savedLanguage = localStorage.getItem('selectedLanguage2325');
+
+  if(savedLanguage !== null)
+  {
+    let radioToCheck = document.querySelector(`input[name="language"][value="${savedLanguage}"]`);
+    
+    if(radioToCheck)
+    {
+      radioToCheck.checked = true;
+      paragraphOutput.textContent = `You Selected: ${savedLanguage}`;
+    }
+    else {
+      paragraphOutput.textContent = 'Saved language not found.'
+    }
+  }
+  else {
+    paragraphOutput.textContent = "No language found in local storage"
+  }
+  
+});
+
+// SELECT SECTION
+let linkTheme // link tag to the stylesheet
+let selTheme // selection form control to the select theme
+
+linkTheme = document.querySelector('#linktheme');
+selTheme = document.querySelector('#themeselector');
+
+function updateTheme() {
+  // alert();
+  linkTheme.href = selTheme.value;
+  // alert(selTheme.value);
+  localStorage.setItem('SelectedTheme2325', selTheme.value);
+}
+  
+  window.addEventListener('resize', function(){
+    // alert();
+    let savedTheme;
+    savedTheme = localStorage.getItem('selectedTheme2325');
+
+    // alert(savedTheme);
+
+    if (savedTheme !== null)
+    { 
+      linkTheme.href = savedTheme; // Load stylesheet
+      selTheme.value = savedTheme;
+
+      // Provide feedback in paragraph output
+      paragraphOutput.textContent = `${selTheme.value} loaded from localStorage!`;
+    }    
+
+  });
+
+  </script>
+</body>

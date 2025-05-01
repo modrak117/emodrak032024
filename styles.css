@@ -1,8 +1,8 @@
 :root {
-    --color-primary: #3a1d14;
-    --color-secondary: #fb9a4a;
+    --color-primary: #333;
+    --color-secondary: white;
     --color-tertiary: black;
-    --color-quaternary: silver;
+    --color-quaternary: grey;
 }
 
 html {
@@ -25,14 +25,14 @@ html {
 }
 
 #pageheader .container {
-    background-color: #3a1d14;
+    background-color: silver;
     box-shadow:none;
 }
 
 #logo {
     background-color: var(--color-primary);
-    background-image: url(Images/usaarpanetrustuniversities.png);
-    border: 1px solid #fb9a4a;
+    background-image: url(Images);
+    border: 1px solid darkgray;
     background-size: cover;
     background-position: center center;
     width: 150px;
@@ -72,7 +72,7 @@ html {
 }
 
 #topnav {
-    background-color: #2D1119;
+    background-color: grey;
     min-height: 75px;
     padding: 1rem;
     text-align: center;
@@ -81,13 +81,13 @@ html {
 #topnav a {
     text-decoration: none;
     text-transform: uppercase;
-    color:#F29447;
+    color:maroon;
     padding:1rem;
 }
 
 #topnav .container {
     min-height: 2rem;
-    background-color:#3A1D14;
+    background-color:white;
     box-shadow:none;
 }
 
@@ -97,7 +97,7 @@ html {
 
 #media {
     background-color: var(--color-tertiary);
-    background-image: url(Images/usaarpanetrustuniversities.png);
+    background-image: url(Images/);
     background-size: cover;
     color: white;
     min-height: 300px;
@@ -183,7 +183,7 @@ html {
 }
 .footerlinks a
 {
-    color:#fb9a4a;
+    color: grey;
 }
 
 /* a {
