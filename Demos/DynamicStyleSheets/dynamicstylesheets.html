@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Style Sheets</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Style Sheets</title>
 
-    <link id="stylelink" rel="stylesheet" href="redtheme.css">
+<link id="stylelink" rel="stylesheet" href="redtheme.css">
 
-    <style>
-        #selstylesheet {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
+<style>
+#selstylesheet {
+position:absolute;
+top:10px;
+right:10px;
+}
+</style>
 
 </head>
 <body>
-    <h1>Dynamic Style Sheets</h1>
-    <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
-        <option value="redtheme.css">Red Theme</option>
-        <option value="greentheme.css">Green Theme</option>
-        <option value="bluetheme.css">Blue Theme</option>
+<h1>Dynamic Style Sheets</h1>
+<select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+<option value="redtheme.css">Red Theme</option>
+<option value="greentheme.css">Green Theme</option>
+<option value="bluetheme.css">Blue Theme</option>
+</select>
 
-        <script>
-            // Select the select control down (dropdown)
-            let selStylesheet;
-            selStylesheet = document.querySelector('#selstylesheet');
+<script>
+// Select the select control (dropdown)
+let selStylesheet;
+selStylesheet = document.querySelector('#selstylesheet');
 
-            // Select the link to the external stylesheet
-            let styleLink;
-            styleLink = document.querySelector('#stylelink');
-            // alert(styleLink);
+// Select the link to external stylesheet
+let styleLink;
+styleLink = document.querySelector('#stylelink');
+//alert(styleLink);
 
-            function updateStylesheet() {
-                 //alert(selStylesheet.value)
-                styleLink.href = selStylesheet.value; // Update the href attribute of the link element
-            }
+function updateStylesheet()
+{
+//alert(selStylesheet.value);
+styleLink.href = selStylesheet.value; // Update the href attribute of the link element
 
-        </script>
-    </select>
+// save to local storage
+localStorage.setItem('selectedStylesheet1938', selStylesheet.value); 
+}
+
+window.addEventListener('load', function()
+{
+    let savedStylesheet = localStorage.getItem('selectedStylesheet1938');
+
+    // alert(savedStylesheet);
+
+    if(savedStylesheet !== null) 
+    {
+        // Link to the saved stylesheet
+        styleLink.href = savedStylesheet;
+        // Match the dropbox box (select) to saved stylesheet
+        selStylesheet.value = savedStylesheet;
+    }
+});
+
+
+</script>
+
 </body>
 </html>
