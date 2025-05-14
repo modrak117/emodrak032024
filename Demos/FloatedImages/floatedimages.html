@@ -30,6 +30,7 @@
                     color: #333;
                     padding: 1rem;
                     border: 1px solid silver;
+                    background-color: darkgray;
                 }
                 .centerimage{
                     display: block;
@@ -60,12 +61,17 @@
                     padding: 1rem;
                 }
 
+                .clearfix::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
         </style>
     </head>
     <body>
 
         <div id="wrapper">
-            <main>
+            <main class >
                 <!-- <img src="Images/Untitled-4.png" alt="code001"> -->
                 <h1>Floated Images</h1>
 <figure>
@@ -94,9 +100,7 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere deserunt consequuntur saepe laborum autem minus voluptatem molestias dolore alias adipisci numquam fugiat qui accusamus error, atque inventore, vel quod impedit. Eius optio provident, cupiditate laboriosam molestiae similique doloribus, voluptas commodi iusto, fugiat itaque quos unde omnis dolores in totam dolore aspernatur temporibus vero ex eaque. Ad expedita accusantium eius hic, libero soluta totam suscipit sed pariatur deserunt asperiores laboriosam ut quas adipisci tempora eligendi consequatur. Ex quidem animi exercitationem magnam unde? Enim non commodi nam eius doloribus officia, quod praesentium molestias suscipit debitis hic repudiandae fugit reprehenderit soluta explicabo. Id!</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere deserunt consequuntur saepe laborum autem minus voluptatem molestias dolore alias adipisci numquam fugiat qui accusamus error, atque inventore, vel quod impedit. Eius optio provident, cupiditate laboriosam molestiae similique doloribus, voluptas commodi iusto, fugiat itaque quos unde omnis dolores in totam dolore aspernatur temporibus vero ex eaque. Ad expedita accusantium eius hic, libero soluta totam suscipit sed pariatur deserunt asperiores laboriosam ut quas adipisci tempora eligendi consequatur. Ex quidem animi exercitationem magnam unde? Enim non commodi nam eius doloribus officia, quod praesentium molestias suscipit debitis hic repudiandae fugit reprehenderit soluta explicabo. Id!</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere deserunt consequuntur saepe laborum autem minus voluptatem molestias dolore alias adipisci numquam fugiat qui accusamus error, atque inventore, vel quod impedit. Eius optio provident, cupiditate laboriosam molestiae similique doloribus, voluptas commodi iusto, fugiat itaque quos unde omnis dolores in totam dolore aspernatur temporibus vero ex eaque. Ad expedita accusantium eius hic, libero soluta totam suscipit sed pariatur deserunt asperiores laboriosam ut quas adipisci tempora eligendi consequatur. Ex quidem animi exercitationem magnam unde? Enim non commodi nam eius doloribus officia, quod praesentium molestias suscipit debitis hic repudiandae fugit reprehenderit soluta explicabo. Id!</p>
-
-                
-            </main>
+        </main>
             
             
         </div>
