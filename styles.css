@@ -241,7 +241,7 @@ html {
         bottom: auto;
     }
     #pageheader .container {
-        min-height: 3.5rem;
+        min-height: 10rem;
     }
 }
 @media screen and (min-width: 1200px) {
