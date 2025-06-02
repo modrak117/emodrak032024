@@ -1,3 +1,25 @@
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.theme-switcher button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+}
+
+.theme-switcher button:hover {
+    opacity: 0.8;
+}
+
 :root {
     --color-primary: #333;
     --color-secondary: white;
@@ -26,7 +48,7 @@ html {
     scroll-behavior: smooth;
 }
 .container {
-    background-color: white;
+    /* background-color: white; */
     min-height: 12rem;
     max-width: 75rem;
     padding: 1rem 3rem 1rem 3rem;

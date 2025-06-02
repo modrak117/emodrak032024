@@ -1,0 +1,28 @@
+:root {
+    --color-primary: #333;
+    --color-secondary: white;
+    --color-tertiary: black;
+    --color-quaternary: grey;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --card-bg: white;
+    --nav-bg: #333;
+    --footer-bg: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--card-bg);
+}
+
+#pageheader, #pagefooter, #subfooter {
+    background-color: var(--nav-bg);
+}
+
+#topnav, #career, #pagecontent, #semester1, #semester2, #keyassignments {
+    background-color: var(--color-primary);
+}

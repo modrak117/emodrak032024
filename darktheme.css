@@ -1,0 +1,34 @@
+:root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #e0e0e0;
+    --color-tertiary: #121212;
+    --color-quaternary: #a0a0a0;
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --nav-bg: #000000;
+    --footer-bg: #000000;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--card-bg);
+    box-shadow: 6px 6px 6px 1px rgba(0, 0, 0, 0.5);
+    background-color: black;
+}
+
+#pageheader, #pagefooter, #subfooter {
+    background-color: var(--nav-bg);
+}
+
+#topnav, #career, #pagecontent, #semester1, #semester2, #keyassignments {
+    background-color: var(--color-primary);
+}
+
+#topnav a, #career a {
+    color: var(--color-secondary);
+}

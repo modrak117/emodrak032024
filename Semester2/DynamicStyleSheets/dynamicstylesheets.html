@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Style Sheets</title>
+
+        <link id="stylelink" rel="stylesheet" href="lighttheme.css">
+    
+    <style>
+        
+        #selstylesheet {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: white;
+            z-index: 1000;
+        }
+        
+        body {
+            font-family:'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        header {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* transition: transform 0.3s ease; */
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Wack Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#school">School</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+        <option value="lighttheme.css">Light Mode</option>
+        <option value="darktheme.css">Dark Mode</option>
+    </select>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Evan Modrak. I'm a regular guy who enjoys entrepreneurship, youtube, and tech. When I'm not studying or watching videos with, I'm usually tinkering with something or studying on new technology. This portfolio shows what I'm into, what I've learned, and the stuff I like working on. Take a look around my work and get to know me better.</p>
+        </section>
+        
+        <section id="work">
+            <h2>My Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Project 1</h3>
+                    <p>My project I worked on.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Project 2</h3>
+                    <p>Another project I worked on.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Project 3</h3>
+                    <p>Most recent project.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>EModr-S899@chusd.org</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Portfolio.</p>
+    </footer>
+    
+    <script>
+        let selStylesheet = document.querySelector('#selstylesheet');
+        
+        let styleLink = document.querySelector('#stylelink');
+        
+        function updateStylesheet() {
+            styleLink.href = selStylesheet.value;
+            
+            localStorage.setItem('selectedStylesheet', selStylesheet.value); 
+        }
+        
+        window.addEventListener('load', function() {
+            let savedStylesheet = localStorage.getItem('selectedStylesheet');
+            
+            if(savedStylesheet !== null) {
+                styleLink.href = savedStylesheet;
+
+                selStylesheet.value = savedStylesheet;
+            }
+        });
+    </script>
+</body>
+</html>

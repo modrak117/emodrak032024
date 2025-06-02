@@ -3,6 +3,7 @@
 	<head>
 		<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+        <link id="stylelink" rel="stylesheet" href="lighttheme.css">
 <link rel="shortcut icon" href="favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="VD" />
@@ -13,6 +14,7 @@
 		<title>Evan Modrak- Portfolio</title>
 
 		<style>
+
 			#career .container ul {
 				background-color: none;
 				list-style-type: none;
@@ -44,6 +46,11 @@
 		</style>
 	</head>
 	<body>
+	
+	<div class="theme-switcher">
+    	<button onclick="setTheme('light')">Light Mode</button>
+    	<button onclick="setTheme('dark')">Dark Mode</button>
+	</div>
 		<!-- begin pageheader -->
 		<header id="pageheader">
 			<div class="container">
@@ -107,7 +114,7 @@
 		<main id="pagecontent">
 			<div class="container">
 				<h2>Introduction</h2>
-				<p>
+			<p>
 					Hi, I'm Evan Modrak. I'm a regular guy who enjoys entrepreneurship, youtube, and tech. When I'm not studying or watching videos with, I'm usually tinkering with something or studying on new technology. This portfolio shows what I'm into, what I've learned, and the stuff I like working on. Take a look around my work and get to know me better. 
 				</p>
 			</div>
@@ -140,6 +147,8 @@
 					<li><a href="Demos/FlexBoxList/flexbox.html">Flexbox List</a></li>
 					<li><a href="Demos/FloatedImages/floatedimages.html">Floated Images</a></li>
 					<li><a href="Demos/DynamicStyleSheets/dynamicstylesheets.html">Dynamic Style Sheets</a></li>
+					
+					<li><a href="Semester2/DynamicStyleSheets/dynamicstylesheets.html">Portfolio Dynamic Style Sheets</a></li>
 					
 
 				</ul>
@@ -202,6 +211,24 @@
 				</div>
 			</div>
 		</footer>
-		<!-- end subfooter -->
+		<script>
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.getElementById('stylelink').href = themeName + 'theme.css';
+    }
+
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
+
+    (function () {
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        setTheme(currentTheme);
+    })();
+</script>
 	</body>
 </html>
